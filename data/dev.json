@@ -1,0 +1,134 @@
+[
+  {
+    "id": "D01",
+    "ticket": {
+      "source_id": "D01-T",
+      "reference": "K8",
+      "note": "Looks like my card was billed twice."
+    },
+    "ledger": [
+      {
+        "row_id": "D01-L1",
+        "reference": "K8",
+        "event_id": "a",
+        "status": "captured",
+        "amount_minor": 3200,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "D01-L2",
+        "reference": "K8",
+        "event_id": "b",
+        "status": "pending",
+        "amount_minor": 3200,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "D02",
+    "ticket": {
+      "source_id": "D02-T",
+      "reference": null,
+      "note": "I lost the order reference. Can you look?"
+    },
+    "ledger": [
+      {
+        "row_id": "D02-L1",
+        "reference": "J1",
+        "event_id": "b",
+        "status": "captured",
+        "amount_minor": 2000,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "D03",
+    "ticket": {
+      "source_id": "D03-T",
+      "reference": "T2",
+      "note": "Two amounts on my statement."
+    },
+    "ledger": [
+      {
+        "row_id": "D03-L1",
+        "reference": "T2",
+        "event_id": "a",
+        "status": "captured",
+        "amount_minor": 1100,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "D03-L2",
+        "reference": "T2",
+        "event_id": "b",
+        "status": "captured",
+        "amount_minor": 1200,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "D04",
+    "ticket": {
+      "source_id": "D04-T",
+      "reference": "B3",
+      "note": "I think nothing was charged."
+    },
+    "ledger": [
+      {
+        "row_id": "D04-L1",
+        "reference": "B3",
+        "event_id": "a",
+        "status": "captured",
+        "amount_minor": 4400,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "D05",
+    "ticket": {
+      "source_id": "D05-T",
+      "reference": "V8",
+      "note": "I still see an old debit."
+    },
+    "ledger": [
+      {
+        "row_id": "D05-L1",
+        "reference": "V8",
+        "event_id": "a",
+        "status": "reversed",
+        "amount_minor": 9700,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "D06",
+    "ticket": {
+      "source_id": "D06-T",
+      "reference": "E3",
+      "note": "Will you refund this?"
+    },
+    "ledger": [
+      {
+        "row_id": "D06-L1",
+        "reference": "E3",
+        "event_id": "a",
+        "status": "captured",
+        "amount_minor": 4000,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "D06-L2",
+        "reference": "E3",
+        "event_id": "b",
+        "status": "captured",
+        "amount_minor": 4000,
+        "currency": "SGD"
+      }
+    ]
+  }
+]

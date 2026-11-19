@@ -1,0 +1,529 @@
+[
+  {
+    "id": "H01",
+    "ticket": {
+      "source_id": "H01-T",
+      "reference": "P6",
+      "note": "I swear I paid twice. Please refund both."
+    },
+    "ledger": [
+      {
+        "row_id": "H01-L1",
+        "reference": "P6",
+        "event_id": "u",
+        "status": "captured",
+        "amount_minor": 3700,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H02",
+    "ticket": {
+      "source_id": "H02-T",
+      "reference": "A6",
+      "note": "Why are two charges showing?"
+    },
+    "ledger": [
+      {
+        "row_id": "H02-L1",
+        "reference": "A6",
+        "event_id": "k",
+        "status": "pending",
+        "amount_minor": 2900,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H02-L2",
+        "reference": "A6",
+        "event_id": "v",
+        "status": "captured",
+        "amount_minor": 2900,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H03",
+    "ticket": {
+      "source_id": "H03-T",
+      "reference": "S2",
+      "note": "Refund my duplicate payment."
+    },
+    "ledger": [
+      {
+        "row_id": "H03-L1",
+        "reference": "S2",
+        "event_id": "h",
+        "status": "captured",
+        "amount_minor": 6000,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H03-L2",
+        "reference": "S2",
+        "event_id": "z",
+        "status": "captured",
+        "amount_minor": 6000,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H04",
+    "ticket": {
+      "source_id": "H04-T",
+      "reference": "U7",
+      "note": "There is a charge for this reference."
+    },
+    "ledger": [
+      {
+        "row_id": "H04-L1",
+        "reference": "U1",
+        "event_id": "h",
+        "status": "captured",
+        "amount_minor": 4400,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H05",
+    "ticket": {
+      "source_id": "H05-T",
+      "reference": null,
+      "note": "My statement is unclear."
+    },
+    "ledger": [
+      {
+        "row_id": "H05-L1",
+        "reference": "F1",
+        "event_id": "a",
+        "status": "captured",
+        "amount_minor": 4800,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H05-L2",
+        "reference": "F1",
+        "event_id": "b",
+        "status": "captured",
+        "amount_minor": 4800,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H06",
+    "ticket": {
+      "source_id": "H06-T",
+      "reference": "F3",
+      "note": "My bank shows this as settled."
+    },
+    "ledger": [
+      {
+        "row_id": "H06-L1",
+        "reference": "F3",
+        "event_id": "h",
+        "status": "pending",
+        "amount_minor": 1200,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H07",
+    "ticket": {
+      "source_id": "H07-T",
+      "reference": "N8",
+      "note": "I received two debit alerts."
+    },
+    "ledger": [
+      {
+        "row_id": "H07-L1",
+        "reference": "N8",
+        "event_id": "c",
+        "status": "reversed",
+        "amount_minor": 9000,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H07-L2",
+        "reference": "N8",
+        "event_id": "k",
+        "status": "reversed",
+        "amount_minor": 9000,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H08",
+    "ticket": {
+      "source_id": "H08-T",
+      "reference": "C5",
+      "note": "I compared the two receipts."
+    },
+    "ledger": [
+      {
+        "row_id": "H08-L1",
+        "reference": "C5",
+        "event_id": "a",
+        "status": "captured",
+        "amount_minor": 2000,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H08-L2",
+        "reference": "C5",
+        "event_id": "b",
+        "status": "captured",
+        "amount_minor": 4500,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H09",
+    "ticket": {
+      "source_id": "H09-T",
+      "reference": "G2",
+      "note": "Only one receipt arrived."
+    },
+    "ledger": [
+      {
+        "row_id": "H09-L1",
+        "reference": "G2",
+        "event_id": "g",
+        "status": "captured",
+        "amount_minor": 2200,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H09-L2",
+        "reference": "G2",
+        "event_id": "g",
+        "status": "captured",
+        "amount_minor": 2200,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H10",
+    "ticket": {
+      "source_id": "H10-T",
+      "reference": "X2",
+      "note": "Why is the status changing?"
+    },
+    "ledger": [
+      {
+        "row_id": "H10-L1",
+        "reference": "X2",
+        "event_id": "w",
+        "status": "captured",
+        "amount_minor": 1600,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H10-L2",
+        "reference": "X2",
+        "event_id": "w",
+        "status": "reversed",
+        "amount_minor": 1600,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H11",
+    "ticket": {
+      "source_id": "H11-T",
+      "reference": "M3",
+      "note": "I was billed overseas."
+    },
+    "ledger": [
+      {
+        "row_id": "H11-L1",
+        "reference": "M3",
+        "event_id": "d",
+        "status": "captured",
+        "amount_minor": 3000,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H11-L2",
+        "reference": "M3",
+        "event_id": "q",
+        "status": "captured",
+        "amount_minor": 3000,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "id": "H12",
+    "ticket": {
+      "source_id": "H12-T",
+      "reference": "J2",
+      "note": "My card is still showing a line."
+    },
+    "ledger": [
+      {
+        "row_id": "H12-L1",
+        "reference": "J2",
+        "event_id": "n",
+        "status": "reversed",
+        "amount_minor": 1700,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H12-L2",
+        "reference": "J2",
+        "event_id": "m",
+        "status": "pending",
+        "amount_minor": 1700,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H12-L3",
+        "reference": "K2",
+        "event_id": "p",
+        "status": "captured",
+        "amount_minor": 1700,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H13",
+    "ticket": {
+      "source_id": "H13-T",
+      "reference": "L1",
+      "note": "You already refunded everything, right?"
+    },
+    "ledger": [
+      {
+        "row_id": "H13-L1",
+        "reference": "L1",
+        "event_id": "x",
+        "status": "captured",
+        "amount_minor": 6700,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H13-L2",
+        "reference": "L1",
+        "event_id": "y",
+        "status": "reversed",
+        "amount_minor": 6700,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H14",
+    "ticket": {
+      "source_id": "H14-T",
+      "reference": "R1",
+      "note": "Both invoices look identical."
+    },
+    "ledger": [
+      {
+        "row_id": "H14-L1",
+        "reference": "R1",
+        "event_id": "a",
+        "status": "captured",
+        "amount_minor": 1000,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H14-L2",
+        "reference": "R1",
+        "event_id": "b",
+        "status": "captured",
+        "amount_minor": 1000,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H14-L3",
+        "reference": "R1",
+        "event_id": "c",
+        "status": "pending",
+        "amount_minor": 1000,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H15",
+    "ticket": {
+      "source_id": "H15-T",
+      "reference": "A2",
+      "note": "Two jobs used similar references."
+    },
+    "ledger": [
+      {
+        "row_id": "H15-L1",
+        "reference": "A22",
+        "event_id": "b",
+        "status": "captured",
+        "amount_minor": 1100,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H15-L2",
+        "reference": "A2",
+        "event_id": "k",
+        "status": "reversed",
+        "amount_minor": 1100,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H16",
+    "ticket": {
+      "source_id": "H16-T",
+      "reference": "O5",
+      "note": "This went through three times, I think."
+    },
+    "ledger": [
+      {
+        "row_id": "H16-L1",
+        "reference": "O5",
+        "event_id": "a",
+        "status": "captured",
+        "amount_minor": 1200,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H16-L2",
+        "reference": "O5",
+        "event_id": "b",
+        "status": "captured",
+        "amount_minor": 1400,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H16-L3",
+        "reference": "O5",
+        "event_id": "a",
+        "status": "captured",
+        "amount_minor": 1200,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H16-L4",
+        "reference": "O5",
+        "event_id": "z",
+        "status": "pending",
+        "amount_minor": 1200,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H17",
+    "ticket": {
+      "source_id": "H17-T",
+      "reference": "K3",
+      "note": "Is this ready to reverse?"
+    },
+    "ledger": [
+      {
+        "row_id": "H17-L1",
+        "reference": "K3",
+        "event_id": "b",
+        "status": "captured",
+        "amount_minor": 3000,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H17-L2",
+        "reference": "K3",
+        "event_id": "b",
+        "status": "captured",
+        "amount_minor": 3100,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H17-L3",
+        "reference": "K3",
+        "event_id": "f",
+        "status": "captured",
+        "amount_minor": 3000,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H18",
+    "ticket": {
+      "source_id": "H18-T",
+      "reference": "Q4",
+      "note": "No charges expected on my account."
+    },
+    "ledger": []
+  },
+  {
+    "id": "H19",
+    "ticket": {
+      "source_id": "H19-T",
+      "reference": "A7",
+      "note": "Could you check both entries?"
+    },
+    "ledger": [
+      {
+        "row_id": "H19-L1",
+        "reference": "A7",
+        "event_id": "c",
+        "status": "captured",
+        "amount_minor": 0,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H19-L2",
+        "reference": "A7",
+        "event_id": "e",
+        "status": "pending",
+        "amount_minor": 0,
+        "currency": "SGD"
+      }
+    ]
+  },
+  {
+    "id": "H20",
+    "ticket": {
+      "source_id": "H20-T",
+      "reference": "O8",
+      "note": "A refund was promised over the phone."
+    },
+    "ledger": [
+      {
+        "row_id": "H20-L1",
+        "reference": "O8",
+        "event_id": "b",
+        "status": "reversed",
+        "amount_minor": 1800,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H20-L2",
+        "reference": "O7",
+        "event_id": "c",
+        "status": "captured",
+        "amount_minor": 1800,
+        "currency": "SGD"
+      },
+      {
+        "row_id": "H20-L3",
+        "reference": "O8",
+        "event_id": "z",
+        "status": "reversed",
+        "amount_minor": 1800,
+        "currency": "SGD"
+      }
+    ]
+  }
+]

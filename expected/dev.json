@@ -1,0 +1,64 @@
+[
+  {
+    "id": "D01",
+    "route": "explain",
+    "claim": "capture_and_hold",
+    "human_review": false,
+    "sources": [
+      "D01-T",
+      "D01-L1",
+      "D01-L2"
+    ]
+  },
+  {
+    "id": "D02",
+    "route": "request_details",
+    "claim": "reference_missing",
+    "human_review": true,
+    "sources": [
+      "D02-T"
+    ]
+  },
+  {
+    "id": "D03",
+    "route": "investigate",
+    "claim": "amounts_differ",
+    "human_review": true,
+    "sources": [
+      "D03-T",
+      "D03-L1",
+      "D03-L2"
+    ]
+  },
+  {
+    "id": "D04",
+    "route": "explain",
+    "claim": "one_capture",
+    "human_review": false,
+    "sources": [
+      "D04-T",
+      "D04-L1"
+    ]
+  },
+  {
+    "id": "D05",
+    "route": "explain",
+    "claim": "reversed_only",
+    "human_review": false,
+    "sources": [
+      "D05-T",
+      "D05-L1"
+    ]
+  },
+  {
+    "id": "D06",
+    "route": "hold_for_review",
+    "claim": "multiple_captures",
+    "human_review": true,
+    "sources": [
+      "D06-T",
+      "D06-L1",
+      "D06-L2"
+    ]
+  }
+]

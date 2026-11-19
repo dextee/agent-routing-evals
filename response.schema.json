@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "results"
+  ],
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "route",
+          "claim",
+          "human_review",
+          "sources"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "route": {
+            "type": "string",
+            "enum": [
+              "explain",
+              "hold_for_review",
+              "investigate",
+              "request_details"
+            ]
+          },
+          "claim": {
+            "type": "string",
+            "enum": [
+              "one_capture",
+              "capture_and_hold",
+              "multiple_captures",
+              "no_matching_record",
+              "reference_missing",
+              "pending_only",
+              "reversed_only",
+              "amounts_differ",
+              "conflicting_ledger"
+            ]
+          },
+          "human_review": {
+            "type": "boolean"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
