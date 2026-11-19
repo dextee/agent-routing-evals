@@ -15,6 +15,8 @@ python -m unittest -v
 
 Use `python evaluate.py --json` for per-ticket outcomes, token counts, failed attempts and timing. Replaying results is offline and uses only the Python standard library.
 
+The grader rebuilds each stage's prompt from the checked-in policy and cases. It verifies that the recorded prompt fingerprint, requested model and reasoning effort agree with the protocol before scoring the answers.
+
 ## What happened on 20 November 2026 (Singapore)
 
 A single GPT-6 Luna request processed 20 synthetic, held-out billing disputes. The escalation strategy reused those answers and asked GPT-6.2 Sol to reconsider the 17 tickets with missing references or a ledger row count other than one. Both requested models used medium effort. The policy, routing rule and expected outputs were [committed before the run](https://github.com/dextee/agent-routing-evals/tree/ed745a4). The two repeated trials used the same cases.

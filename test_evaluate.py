@@ -1,6 +1,9 @@
-import copy
+import json
+from pathlib import Path
+import shutil
+from tempfile import TemporaryDirectory
 import unittest
-from evaluate import index_answers, replay, summarize
+from evaluate import PILOT, index_answers, replay, summarize
 
 GOLD = {'id': 'T1', 'route': 'explain', 'claim': 'one_capture', 'sources': ['T1','L1'],
         'human_review': False}
@@ -43,6 +46,22 @@ class ReplayTests(unittest.TestCase):
                 self.assertEqual(row[strategy]['total'], 20)
                 self.assertEqual(len(row[strategy]['cases']), 20)
                 self.assertIsNone(row[strategy]['cost_per_accepted_usd'])
+
+    def test_replay_rejects_changed_prompt_or_effort(self):
+        with TemporaryDirectory() as tmp:
+            runs = shutil.copytree(PILOT, Path(tmp) / 'runs')
+            for stage in ('baseline', 'second-read'):
+                path = runs / f'heldout-1-{stage}.json'
+                original = path.read_text(encoding='utf-8')
+                for field, value, message in [('prompt_sha256', '0' * 64, 'Prompt fingerprint'),
+                                              ('effort', 'low', 'Reasoning effort')]:
+                    with self.subTest(stage=stage, field=field):
+                        record = json.loads(original)
+                        record[field] = value
+                        path.write_text(json.dumps(record), encoding='utf-8')
+                        with self.assertRaisesRegex(ValueError, message):
+                            replay(runs)
+                path.write_text(original, encoding='utf-8')
 
 
 if __name__ == '__main__':

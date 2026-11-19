@@ -4,7 +4,7 @@ from collections import Counter
 import json
 from pathlib import Path
 
-from collect import ROOT, MODELS, load, second_read
+from collect import EFFORT, ROOT, MODELS, build_prompt, load, prompt_digest, second_read
 
 FIELDS = {'id', 'route', 'claim', 'sources', 'human_review'}
 PILOT = ROOT / 'results' / 'pilot-2026-11-20'
@@ -70,13 +70,20 @@ def replay(directory=PILOT, split='heldout'):
     ids = [c['id'] for c in cases]
     if len(ids) != len(set(ids)) or [r['id'] for r in gold] != ids:
         raise ValueError('Answer key does not cover the unique fixture IDs in order')
-    escalated = [c['id'] for c in cases if second_read(c)]
+    second_read_cases = [c for c in cases if second_read(c)]
+    escalated = [c['id'] for c in second_read_cases]
+    digests = {'baseline': prompt_digest(build_prompt(cases)),
+               'second-read': prompt_digest(build_prompt(second_read_cases))}
     repeats = {}
     for path in sorted(directory.glob(f'{split}-*.json')):
         r = json.loads(path.read_text(encoding='utf-8'))
         stage = r['stage']
         if r['split'] != split or stage not in MODELS or r['requested_model'] != MODELS[stage]:
             raise ValueError(f'Unexpected run metadata: {path.name}')
+        if r.get('effort') != EFFORT:
+            raise ValueError(f'Reasoning effort differs from the protocol: {path.name}')
+        if r.get('prompt_sha256') != digests[stage]:
+            raise ValueError(f'Prompt fingerprint differs from the policy and inputs: {path.name}')
         batch = repeats.setdefault(r['repeat'], {})
         if stage in batch:
             raise ValueError(f'Duplicate stage: {path.name}')
